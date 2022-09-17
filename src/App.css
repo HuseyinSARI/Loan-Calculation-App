@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+:root{
+  --color1: #FFF5E4;
+  --color2: #FFC4C4;
+  --color3: #EE6983;
+  --color4: #850E35;
+  
+  color: var(--color4) ;
+  font-weight: 500;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+button{
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/premium-vector/sakura-white-background-watercolor-cherry-bud-cherry-blossom-flower-blooming-vector-pink-sakura-flower-background-cherry-blossom-branch-with-sakura-flower-watercolor-cherry-blossom-vector_538213-243.jpg?w=2000");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 600px;
+  background-color: var(--color2);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-sm-6{
+  width: 50%;
+}
+
+.col-sm-12{
+  width: 100%;
+}
+
+.inputs form > * {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  color: var(--color4);
+}
+.inputs form > div:last-of-type {
+  justify-content: flex-end;
+}
+
+input{
+  border: 1px solid var(--color4);
+  border-radius: 10px;
+  padding: 5px;  
+  color: var(--color4);
+}
+label{
+  padding-bottom: 5px;
+}
+select{
+  border: 1px solid var(--color4);
+  border-radius: 10px;
+  padding: 5px;  
+}
+
+.inputs button{
+  padding: 5px;
+  border: 1px solid var(--color4);
+  border-radius: 10px;
+  background-color: var(--color3);
+  color: var(--color1);
+}
+
+.infoArea{
+  width: 100%;
+  background-color: var(--color1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  color: var(--color4);
+}
+
+.infoArea > div:nth-of-type(1){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoArea > div:nth-of-type(2),.infoArea div:nth-of-type(3){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.infoArea > div:nth-of-type(4) button{
+  width: 100%;
+}
+
+.infoArea button{
+  padding: 5px;
+  border: 1px solid var(--color4);
+  border-radius: 10px;
+  background-color: var(--color3);
+  color: var(--color1);
+  margin-top: 10px;
+}
+
+.modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.modal_inner{
+  background-color: var(--color1);
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+.modal button{
+  border:none;
+  cursor: pointer;
+}
+
+.table_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px ;
+  background-color: var(--color3);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   color: white;
+  font-weight: 600;
+}
+th{
+padding-right: 10px;
+padding-left: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+tbody td{
+  padding: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tbody tr:nth-of-type(2n-1){
+  background-color: var(--color2);
 }

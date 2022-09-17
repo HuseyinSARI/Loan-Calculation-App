@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+////////////////////////////////////////7
+//
+//  Context API kullanarak elimizdeki verileri alt component lere yolladığımız yer.
+//
+//////////////////////////////////
+
+
+import "./App.css";
+import Container from "./components/Container";
+
+import { InputDataProvider } from "./context/InputDataContext";
+import { CalculationProvider } from "./context/CalculationContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <InputDataProvider>       
+        <CalculationProvider>
+          <Container />
+        </CalculationProvider>
+      </InputDataProvider>
     </div>
   );
 }
